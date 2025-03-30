@@ -1,5 +1,4 @@
-
-import { Category, Tool, User } from './types';
+import { Category, Tool, User, SearchFilters } from './types';
 
 export const categories: Category[] = [
   {
