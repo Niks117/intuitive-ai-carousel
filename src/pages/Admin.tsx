@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,6 +25,7 @@ import {
 import { categories, allTools } from '@/lib/data';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
+import { Tool } from '@/lib/types';
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -70,13 +72,13 @@ const Admin = () => {
 
 const ToolsManagement = () => {
   const [tools, setTools] = useState(allTools);
-  const [newTool, setNewTool] = useState({
+  const [newTool, setNewTool] = useState<Tool>({
     id: '',
     name: '',
     description: '',
     shortDescription: '',
     useCase: '',
-    pricing: 'Free',
+    pricing: 'Free', // Ensure this is one of the allowed values
     website: '',
     documentation: '',
     imageUrl: '',
@@ -91,8 +93,14 @@ const ToolsManagement = () => {
     setNewTool({ ...newTool, [e.target.name]: e.target.value });
   };
   
-  const handleSelectChange = (e: string | string[], name: string) => {
-    setNewTool({ ...newTool, [name]: e });
+  const handleSelectChange = (value: string, name: string) => {
+    // For pricing, ensure it's one of the valid options
+    if (name === 'pricing') {
+      const validPricing = value as 'Free' | 'Paid' | 'Freemium';
+      setNewTool({ ...newTool, [name]: validPricing });
+    } else {
+      setNewTool({ ...newTool, [name]: value });
+    }
   };
   
   const addTool = () => {
@@ -165,7 +173,7 @@ const ToolsManagement = () => {
           </div>
           <div>
             <Label htmlFor="pricing">Pricing</Label>
-            <Select onValueChange={(value) => handleSelectChange(value, 'pricing')}>
+            <Select onValueChange={(value) => handleSelectChange(value, 'pricing')} value={newTool.pricing}>
               <SelectTrigger>
                 <SelectValue placeholder="Select pricing" />
               </SelectTrigger>
