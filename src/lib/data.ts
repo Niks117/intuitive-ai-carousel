@@ -1,4 +1,3 @@
-
 import { Category, Tool, User, SearchFilters } from './types';
 
 export const categories: Category[] = [
@@ -466,10 +465,7 @@ export const categories: Category[] = [
   }
 ];
 
-// Since we have a large number of categories now, we should create a simplified list of tools
-// Let's create placeholder tools for some of these categories, focusing on more popular ones
 export const tools: Tool[] = [
-  // AI Chat & Assistant
   {
     id: "chatgpt",
     name: "ChatGPT",
@@ -502,8 +498,54 @@ export const tools: Tool[] = [
     popularity: 92,
     releaseDate: "2023-03-14"
   },
-  
-  // Image Generators
+  {
+    id: "bard",
+    name: "Gemini",
+    description: "Gemini (formerly Bard) is Google's AI assistant that provides conversational responses, helping with creative content, answering questions, and assisting with various tasks.",
+    shortDescription: "Google's AI assistant",
+    useCase: "Information retrieval, creative writing, task assistance",
+    pricing: "Freemium",
+    website: "https://gemini.google.com/",
+    documentation: "https://ai.google.dev/docs",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["ai-chat", "ai-useful"],
+    featured: false,
+    popularity: 88,
+    releaseDate: "2023-05-10"
+  },
+  {
+    id: "character-ai",
+    name: "Character.AI",
+    description: "Character.AI allows users to create and chat with AI characters based on fictional characters, historical figures, or original creations.",
+    shortDescription: "Platform for creating conversational AI characters",
+    useCase: "Entertainment, roleplay, language practice, creative writing",
+    pricing: "Freemium",
+    website: "https://character.ai/",
+    documentation: "https://help.character.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["ai-chat", "ai-characters"],
+    featured: false,
+    popularity: 84,
+    releaseDate: "2022-09-20"
+  },
+  {
+    id: "pi-ai",
+    name: "Pi",
+    description: "Pi is a personal AI assistant designed for conversation and providing thoughtful, helpful responses to questions on virtually any topic.",
+    shortDescription: "Personal AI assistant with natural conversation",
+    useCase: "Personal assistance, conversation, information retrieval",
+    pricing: "Free",
+    website: "https://pi.ai/",
+    documentation: "https://docs.pi.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["ai-chat", "life-assistants"],
+    featured: false,
+    popularity: 82,
+    releaseDate: "2023-08-08"
+  },
   {
     id: "midjourney",
     name: "Midjourney",
@@ -536,8 +578,54 @@ export const tools: Tool[] = [
     popularity: 94,
     releaseDate: "2023-09-20"
   },
-  
-  // Assistant Code
+  {
+    id: "stable-diffusion",
+    name: "Stable Diffusion",
+    description: "Stable Diffusion is an open-source AI model that can generate detailed images from text descriptions, available for local installation and customization.",
+    shortDescription: "Open-source text-to-image generation",
+    useCase: "Creative image generation, art creation, concept visualization",
+    pricing: "Free",
+    website: "https://stability.ai/",
+    documentation: "https://stability.ai/documentation",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["image-generators", "art", "github-projects"],
+    featured: true,
+    popularity: 90,
+    releaseDate: "2022-08-22"
+  },
+  {
+    id: "leonardo-ai",
+    name: "Leonardo.AI",
+    description: "Leonardo.AI is a creative platform for generating and manipulating images using AI, offering various styles and customization options.",
+    shortDescription: "AI creative suite for image generation",
+    useCase: "Game asset creation, concept art, illustrations",
+    pricing: "Freemium",
+    website: "https://leonardo.ai/",
+    documentation: "https://docs.leonardo.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["image-generators", "art"],
+    featured: false,
+    popularity: 87,
+    releaseDate: "2022-12-15"
+  },
+  {
+    id: "firefly",
+    name: "Adobe Firefly",
+    description: "Adobe Firefly is a creative generative AI that creates images, effects, and text styles for creative projects with commercial rights for the outputs.",
+    shortDescription: "Adobe's generative AI for creative work",
+    useCase: "Commercial design, creative imagery, text effects",
+    pricing: "Paid",
+    website: "https://firefly.adobe.com/",
+    documentation: "https://helpx.adobe.com/firefly/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["image-generators", "art", "websites-design"],
+    featured: true,
+    popularity: 89,
+    releaseDate: "2023-03-21"
+  },
   {
     id: "copilot",
     name: "GitHub Copilot",
@@ -570,8 +658,54 @@ export const tools: Tool[] = [
     popularity: 86,
     releaseDate: "2022-06-23"
   },
-  
-  // Productivity
+  {
+    id: "tabnine",
+    name: "Tabnine",
+    description: "Tabnine is an AI code assistant that provides code completions based on your code patterns and context, supporting many programming languages and IDEs.",
+    shortDescription: "AI code completion for multiple languages",
+    useCase: "Code autocompletion, code suggestions",
+    pricing: "Freemium",
+    website: "https://www.tabnine.com/",
+    documentation: "https://docs.tabnine.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["assistant-code", "developer-tools"],
+    featured: false,
+    popularity: 84,
+    releaseDate: "2019-03-15"
+  },
+  {
+    id: "codium",
+    name: "Codium",
+    description: "Codium is an AI coding assistant that generates unit tests automatically, helping developers ensure code quality and test coverage.",
+    shortDescription: "AI-powered test generation",
+    useCase: "Automated test creation, code quality improvement",
+    pricing: "Freemium",
+    website: "https://www.codium.ai/",
+    documentation: "https://docs.codium.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["assistant-code", "developer-tools"],
+    featured: false,
+    popularity: 82,
+    releaseDate: "2022-11-10"
+  },
+  {
+    id: "cursor",
+    name: "Cursor",
+    description: "Cursor is an AI-powered code editor that helps developers understand, edit, and generate code with features like AI chat, code editing, and refactoring.",
+    shortDescription: "AI-enhanced code editor",
+    useCase: "Code understanding, generation, editing, refactoring",
+    pricing: "Freemium",
+    website: "https://cursor.sh/",
+    documentation: "https://docs.cursor.sh/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["assistant-code", "developer-tools"],
+    featured: false,
+    popularity: 85,
+    releaseDate: "2023-02-07"
+  },
   {
     id: "notion-ai",
     name: "Notion AI",
@@ -588,8 +722,70 @@ export const tools: Tool[] = [
     popularity: 90,
     releaseDate: "2023-02-22"
   },
-  
-  // LLM Models
+  {
+    id: "zapier",
+    name: "Zapier AI",
+    description: "Zapier AI integrates AI capabilities into workflow automation, allowing users to build AI-powered workflows that can process natural language and perform actions across apps.",
+    shortDescription: "AI-powered workflow automation",
+    useCase: "Automation, data processing, content generation",
+    pricing: "Paid",
+    website: "https://zapier.com/ai",
+    documentation: "https://help.zapier.com/hc/en-us/articles/15163945759117-Get-started-with-Zapier-AI",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["productivity", "automation"],
+    featured: false,
+    popularity: 87,
+    releaseDate: "2023-05-16"
+  },
+  {
+    id: "taskade",
+    name: "Taskade AI",
+    description: "Taskade AI is a productivity tool that helps with task management, note-taking, and project collaboration, featuring AI-powered assistance for generating content and organizing work.",
+    shortDescription: "All-in-one AI productivity workspace",
+    useCase: "Task management, note-taking, collaboration",
+    pricing: "Freemium",
+    website: "https://www.taskade.com/ai",
+    documentation: "https://help.taskade.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["productivity", "business"],
+    featured: false,
+    popularity: 83,
+    releaseDate: "2022-08-30"
+  },
+  {
+    id: "mem",
+    name: "Mem",
+    description: "Mem is an AI-powered note-taking app that automatically organizes your notes and knowledge base, with features like knowledge connections and smart search.",
+    shortDescription: "AI-powered knowledge organization",
+    useCase: "Note-taking, knowledge management, collaboration",
+    pricing: "Freemium",
+    website: "https://mem.ai/",
+    documentation: "https://help.mem.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["productivity", "memory"],
+    featured: false,
+    popularity: 82,
+    releaseDate: "2021-11-16"
+  },
+  {
+    id: "timely",
+    name: "Timely",
+    description: "Timely is an AI time tracking tool that automatically records time spent on projects, helping users track billable hours without manual timers.",
+    shortDescription: "AI-powered automatic time tracking",
+    useCase: "Time management, project tracking, billing",
+    pricing: "Paid",
+    website: "https://timelyapp.com/",
+    documentation: "https://support.timelyapp.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["productivity", "business"],
+    featured: false,
+    popularity: 80,
+    releaseDate: "2020-03-10"
+  },
   {
     id: "gpt4",
     name: "GPT-4",
@@ -622,8 +818,54 @@ export const tools: Tool[] = [
     popularity: 91,
     releaseDate: "2024-04-18"
   },
-  
-  // Text-to-Speech
+  {
+    id: "claude-3",
+    name: "Claude 3",
+    description: "Claude 3 is Anthropic's latest AI model family with improved reasoning, factual accuracy, and multimodal capabilities, available in three variants: Haiku, Sonnet, and Opus.",
+    shortDescription: "Anthropic's advanced AI model family",
+    useCase: "Content creation, reasoning, multimodal tasks",
+    pricing: "Paid",
+    website: "https://www.anthropic.com/claude",
+    documentation: "https://docs.anthropic.com/claude/docs",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["llm-models", "latest-ai"],
+    featured: true,
+    popularity: 92,
+    releaseDate: "2024-03-04"
+  },
+  {
+    id: "mistral",
+    name: "Mistral AI",
+    description: "Mistral AI offers a range of open-source and commercial large language models known for their efficiency and performance relative to their size.",
+    shortDescription: "Efficient, performant language models",
+    useCase: "Text generation, reasoning, custom applications",
+    pricing: "Freemium",
+    website: "https://mistral.ai/",
+    documentation: "https://docs.mistral.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["llm-models", "latest-ai"],
+    featured: false,
+    popularity: 88,
+    releaseDate: "2023-09-27"
+  },
+  {
+    id: "cohere",
+    name: "Cohere Command",
+    description: "Cohere Command is a family of large language models optimized for business and enterprise use cases, with strong performance on tasks requiring reasoning and instruction following.",
+    shortDescription: "Enterprise-focused language models",
+    useCase: "Business applications, document understanding, customer service",
+    pricing: "Paid",
+    website: "https://cohere.com/",
+    documentation: "https://docs.cohere.com/docs",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["llm-models", "business"],
+    featured: false,
+    popularity: 85,
+    releaseDate: "2023-05-05"
+  },
   {
     id: "elevenlabs",
     name: "ElevenLabs",
@@ -640,48 +882,121 @@ export const tools: Tool[] = [
     popularity: 89,
     releaseDate: "2022-01-15"
   },
-  
-  // Video Generators
   {
-    id: "runway",
-    name: "Runway Gen-2",
-    description: "Runway Gen-2 is an AI video generation model that can transform text, images, and video clips into entirely new videos, enabling creative video production capabilities.",
-    shortDescription: "AI-powered video generation platform",
-    useCase: "Video creation, special effects, creative content production",
-    pricing: "Paid",
-    website: "https://runwayml.com/",
-    documentation: "https://docs.runwayml.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["video-generators", "text-to-video"],
-    featured: true,
-    popularity: 88,
-    releaseDate: "2023-03-20"
-  },
-  
-  // 3D Model
-  {
-    id: "meshy",
-    name: "Meshy",
-    description: "Meshy is an AI-powered platform for creating 3D assets from text or image prompts. It enables users to generate textures, models, and environments for games, AR/VR, and other 3D applications.",
-    shortDescription: "AI-powered 3D asset creation",
-    useCase: "Game development, 3D modeling, virtual environments",
+    id: "murf",
+    name: "Murf AI",
+    description: "Murf AI provides studio-quality voice overs with AI voices that sound like real humans, allowing users to create professional voiceovers without a recording studio.",
+    shortDescription: "AI voice generation for professional content",
+    useCase: "Video narration, presentations, educational content",
     pricing: "Freemium",
-    website: "https://www.meshy.ai/",
-    documentation: "https://docs.meshy.ai/",
+    website: "https://murf.ai/",
+    documentation: "https://docs.murf.ai/",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["3d-model"],
+    categoryIds: ["text-to-speech", "voice-cloning"],
+    featured: false,
+    popularity: 86,
+    releaseDate: "2020-11-18"
+  },
+  {
+    id: "play-ht",
+    name: "Play.ht",
+    description: "Play.ht uses AI to generate human-like voiceovers in over 130 languages and 850+ voice options, with features for voice cloning and real-time voice conversion.",
+    shortDescription: "AI voice generation platform",
+    useCase: "Podcasts, video narration, advertising, audiobooks",
+    pricing: "Freemium",
+    website: "https://play.ht/",
+    documentation: "https://docs.play.ht/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["text-to-speech", "voice-cloning"],
     featured: false,
     popularity: 85,
-    releaseDate: "2023-05-10"
+    releaseDate: "2020-09-03"
+  },
+  {
+    id: "wellsaid",
+    name: "WellSaid Labs",
+    description: "WellSaid Labs creates AI voice avatars for professional voice over production, allowing users to create studio-quality narration without recording equipment.",
+    shortDescription: "AI voice avatars for professional voiceovers",
+    useCase: "E-learning, corporate training, product demos",
+    pricing: "Paid",
+    website: "https://wellsaidlabs.com/",
+    documentation: "https://help.wellsaidlabs.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["text-to-speech", "voice-cloning"],
+    featured: false,
+    popularity: 84,
+    releaseDate: "2019-04-22"
+  },
+  {
+    id: "speechify",
+    name: "Speechify",
+    description: "Speechify is a text-to-speech application that converts text into natural-sounding speech, allowing users to listen to documents, articles, PDFs, and more.",
+    shortDescription: "Text-to-speech reader for documents",
+    useCase: "Reading assistance, content consumption, accessibility",
+    pricing: "Freemium",
+    website: "https://speechify.com/",
+    documentation: "https://help.speechify.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["text-to-speech", "assistive-tech"],
+    featured: false,
+    popularity: 87,
+    releaseDate: "2018-01-30"
   }
 ];
 
-// Combine the initial tools with more from different categories to create a more robust dataset
+const MIN_TOOLS_PER_CATEGORY = 5;
+
+const generateToolsForCategory = (categoryId: string, existingToolsCount: number): Tool[] => {
+  if (existingToolsCount >= MIN_TOOLS_PER_CATEGORY) return [];
+  
+  const category = categories.find(c => c.id === categoryId);
+  if (!category) return [];
+  
+  const toolsNeeded = MIN_TOOLS_PER_CATEGORY - existingToolsCount;
+  const newTools: Tool[] = [];
+  
+  for (let i = 1; i <= toolsNeeded; i++) {
+    const toolId = `${categoryId}-tool-${i}`;
+    newTools.push({
+      id: toolId,
+      name: `${category.name} Tool ${i}`,
+      description: `An AI-powered tool for ${category.description.toLowerCase()}`,
+      shortDescription: `AI solution for ${category.name.toLowerCase()}`,
+      useCase: `Used for various ${category.name.toLowerCase()} tasks and workflows`,
+      pricing: ['Free', 'Paid', 'Freemium'][Math.floor(Math.random() * 3)] as 'Free' | 'Paid' | 'Freemium',
+      website: `https://example.com/${toolId}`,
+      documentation: `https://docs.example.com/${toolId}`,
+      imageUrl: "/placeholder.svg",
+      logoUrl: "/placeholder.svg",
+      categoryIds: [categoryId],
+      featured: false,
+      popularity: 60 + Math.floor(Math.random() * 20),
+      releaseDate: `202${Math.floor(Math.random() * 5)}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, '0')}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, '0')}`
+    });
+  }
+  
+  return newTools;
+};
+
+const generateAdditionalTools = (): Tool[] => {
+  const additionalTools: Tool[] = [];
+  
+  categories.forEach(category => {
+    const toolsInCategory = tools.filter(tool => tool.categoryIds.includes(category.id));
+    const newTools = generateToolsForCategory(category.id, toolsInCategory.length);
+    additionalTools.push(...newTools);
+  });
+  
+  return additionalTools;
+};
+
 export const allTools: Tool[] = [
   ...tools,
-  // Adding more tools from different categories
+  ...generateAdditionalTools(),
   {
     id: "perplexity",
     name: "Perplexity AI",
@@ -780,7 +1095,6 @@ export const allTools: Tool[] = [
   }
 ];
 
-// Mock users for the application
 export const users: User[] = [
   {
     id: "user1",
@@ -798,17 +1112,14 @@ export const users: User[] = [
   }
 ];
 
-// Function to get tools by category
 export const getToolsByCategory = (categoryId: string): Tool[] => {
   return allTools.filter(tool => tool.categoryIds.includes(categoryId));
 };
 
-// Function to get featured tools
 export const getFeaturedTools = (): Tool[] => {
   return allTools.filter(tool => tool.featured);
 };
 
-// Function to search tools
 export const searchTools = (query: string): Tool[] => {
   const lowerCaseQuery = query.toLowerCase();
   return allTools.filter(tool => 
@@ -818,10 +1129,8 @@ export const searchTools = (query: string): Tool[] => {
   );
 };
 
-// Function to filter tools
 export const filterTools = (filters: SearchFilters): Tool[] => {
   return allTools.filter(tool => {
-    // Filter by search query
     if (filters.query && 
         !tool.name.toLowerCase().includes(filters.query.toLowerCase()) &&
         !tool.description.toLowerCase().includes(filters.query.toLowerCase()) &&
@@ -829,13 +1138,11 @@ export const filterTools = (filters: SearchFilters): Tool[] => {
       return false;
     }
     
-    // Filter by categories
     if (filters.categories.length > 0 && 
         !tool.categoryIds.some(cat => filters.categories.includes(cat))) {
       return false;
     }
     
-    // Filter by pricing
     if (filters.pricing.length > 0 && 
         !filters.pricing.includes(tool.pricing)) {
       return false;
@@ -843,7 +1150,6 @@ export const filterTools = (filters: SearchFilters): Tool[] => {
     
     return true;
   }).sort((a, b) => {
-    // Sort by selected criteria
     if (filters.sortBy === 'popularity') {
       return filters.sortOrder === 'desc' 
         ? b.popularity - a.popularity 
@@ -853,7 +1159,6 @@ export const filterTools = (filters: SearchFilters): Tool[] => {
         ? new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime()
         : new Date(a.releaseDate).getTime() - new Date(b.releaseDate).getTime();
     } else {
-      // Sort by name
       return filters.sortOrder === 'desc' 
         ? b.name.localeCompare(a.name) 
         : a.name.localeCompare(b.name);
@@ -861,12 +1166,10 @@ export const filterTools = (filters: SearchFilters): Tool[] => {
   });
 };
 
-// Function to recommend tools
 export const recommendTools = (toolId: string, limit: number = 4): Tool[] => {
   const tool = allTools.find(t => t.id === toolId);
   if (!tool) return [];
   
-  // Find tools in the same categories
   const relatedTools = allTools
     .filter(t => 
       t.id !== toolId && // Not the same tool
@@ -878,23 +1181,19 @@ export const recommendTools = (toolId: string, limit: number = 4): Tool[] => {
   return relatedTools;
 };
 
-// Function to get recommended tools for a user based on favorites
 export const recommendToolsForUser = (userId: string, limit: number = 4): Tool[] => {
   const user = users.find(u => u.id === userId);
   if (!user || user.favoriteToolIds.length === 0) {
-    // If no user or no favorites, return popular tools
     return allTools
       .sort((a, b) => b.popularity - a.popularity)
       .slice(0, limit);
   }
   
-  // Get categories from user's favorite tools
   const favoriteTools = allTools.filter(tool => user.favoriteToolIds.includes(tool.id));
   const favoriteCategories = Array.from(
     new Set(favoriteTools.flatMap(tool => tool.categoryIds))
   );
   
-  // Find tools in those categories that user hasn't favorited yet
   const recommendations = allTools
     .filter(tool => 
       !user.favoriteToolIds.includes(tool.id) && // Not already favorited
