@@ -466,7 +466,6 @@ export const categories: Category[] = [
 ];
 
 export const tools: Tool[] = [
-  // Email Tools
   {
     id: "hoppycopy",
     name: "HoppyCopy",
@@ -548,7 +547,6 @@ export const tools: Tool[] = [
     releaseDate: "2021-03-08"
   },
   
-  // E-commerce Tools
   {
     id: "magic-shopify",
     name: "Magic by Shopify",
@@ -630,7 +628,6 @@ export const tools: Tool[] = [
     releaseDate: "2019-05-20"
   },
   
-  // Dating & Relationships Tools
   {
     id: "roast-dating",
     name: "Roast Dating",
@@ -712,7 +709,6 @@ export const tools: Tool[] = [
     releaseDate: "2022-09-05"
   },
   
-  // Data & Analytics Tools
   {
     id: "databricks",
     name: "Databricks",
@@ -794,7 +790,6 @@ export const tools: Tool[] = [
     releaseDate: "2019-10-15"
   },
   
-  // Customer Support Tools
   {
     id: "echowin-ai-support",
     name: "Echowin AI",
@@ -876,7 +871,6 @@ export const tools: Tool[] = [
     releaseDate: "2018-05-30"
   },
   
-  // 3D Model Tools
   {
     id: "leonardo-ai-3d",
     name: "Leonardo AI",
@@ -886,3 +880,109 @@ export const tools: Tool[] = [
     pricing: "Freemium",
     website: "https://leonardo.ai/",
     documentation: "https://docs.leonardo.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["3d-model", "image-generators"],
+    featured: true,
+    popularity: 89,
+    releaseDate: "2022-04-12"
+  }
+];
+
+export const allTools = tools;
+
+export const users: User[] = [
+  {
+    id: "1",
+    name: "Demo User",
+    email: "demo@example.com",
+    isAdmin: false,
+    favoriteToolIds: ["leonardo-ai-3d", "hoppycopy", "kaggle"]
+  },
+  {
+    id: "2",
+    name: "Admin User",
+    email: "admin@example.com",
+    isAdmin: true,
+    favoriteToolIds: []
+  }
+];
+
+export const getToolsByCategory = (categoryId: string): Tool[] => {
+  return tools.filter(tool => tool.categoryIds.includes(categoryId));
+};
+
+export const filterTools = (filters: SearchFilters): Tool[] => {
+  let filteredTools = [...tools];
+  
+  if (filters.query) {
+    const query = filters.query.toLowerCase();
+    filteredTools = filteredTools.filter(tool => 
+      tool.name.toLowerCase().includes(query) || 
+      tool.description.toLowerCase().includes(query) ||
+      tool.shortDescription.toLowerCase().includes(query) ||
+      tool.useCase.toLowerCase().includes(query)
+    );
+  }
+  
+  if (filters.categories.length > 0) {
+    filteredTools = filteredTools.filter(tool => 
+      filters.categories.some(categoryId => tool.categoryIds.includes(categoryId))
+    );
+  }
+  
+  if (filters.pricing.length > 0) {
+    filteredTools = filteredTools.filter(tool => 
+      filters.pricing.includes(tool.pricing)
+    );
+  }
+  
+  filteredTools.sort((a, b) => {
+    let comparison = 0;
+    
+    switch (filters.sortBy) {
+      case 'popularity':
+        comparison = b.popularity - a.popularity; // Higher popularity first
+        break;
+      case 'releaseDate':
+        comparison = new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime(); // Newer first
+        break;
+      case 'name':
+        comparison = a.name.localeCompare(b.name); // Alphabetical
+        break;
+    }
+    
+    return filters.sortOrder === 'asc' ? -comparison : comparison;
+  });
+  
+  return filteredTools;
+};
+
+export const getFeaturedTools = (): Tool[] => {
+  return tools.filter(tool => tool.featured)
+    .sort((a, b) => b.popularity - a.popularity);
+};
+
+export const recommendTools = (toolId: string, limit: number = 3): Tool[] => {
+  const tool = tools.find(t => t.id === toolId);
+  
+  if (!tool) return [];
+  
+  const relatedTools = tools.filter(t => 
+    t.id !== toolId && 
+    t.categoryIds.some(category => tool.categoryIds.includes(category))
+  );
+  
+  relatedTools.sort((a, b) => {
+    const aMatchCount = a.categoryIds.filter(c => tool.categoryIds.includes(c)).length;
+    const bMatchCount = b.categoryIds.filter(c => tool.categoryIds.includes(c)).length;
+    
+    if (bMatchCount !== aMatchCount) {
+      return bMatchCount - aMatchCount;
+    }
+    
+    return b.popularity - a.popularity;
+  });
+  
+  return relatedTools.slice(0, limit);
+};
