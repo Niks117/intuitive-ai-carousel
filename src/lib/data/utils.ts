@@ -1,6 +1,7 @@
 
 import { SearchFilters, Tool } from '../types';
 import { tools } from './tools';
+import { categories } from './categories';
 
 /**
  * Get tools by category ID
@@ -98,5 +99,3 @@ export const recommendTools = (toolId: string, limit: number = 3): Tool[] => {
   return relatedTools.slice(0, limit);
 };
 
-// Import here to avoid circular dependency
-import { categories } from './categories';
