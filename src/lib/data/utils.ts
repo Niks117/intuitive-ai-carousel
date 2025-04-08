@@ -21,7 +21,12 @@ export const filterTools = (filters: SearchFilters): Tool[] => {
       tool.name.toLowerCase().includes(query) || 
       tool.description.toLowerCase().includes(query) ||
       tool.shortDescription.toLowerCase().includes(query) ||
-      tool.useCase.toLowerCase().includes(query)
+      tool.useCase.toLowerCase().includes(query) ||
+      // Also match by category names that the tool belongs to
+      tool.categoryIds.some(catId => {
+        const matchingCategory = categories.find(cat => cat.id === catId);
+        return matchingCategory && matchingCategory.name.toLowerCase().includes(query);
+      })
     );
   }
   
@@ -92,3 +97,6 @@ export const recommendTools = (toolId: string, limit: number = 3): Tool[] => {
   
   return relatedTools.slice(0, limit);
 };
+
+// Import here to avoid circular dependency
+import { categories } from './categories';

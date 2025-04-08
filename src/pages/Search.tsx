@@ -1,10 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { filterTools } from '@/lib/data';
-import { SearchFilters as SearchFiltersType } from '@/lib/types';
+import { filterTools, categories } from '@/lib/data';
+import { SearchFilters as SearchFiltersType, Category } from '@/lib/types';
 import SearchFilters from '@/components/SearchFilters';
 import ToolCard from '@/components/ToolCard';
+import MatchedCategories from '@/components/MatchedCategories';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search as SearchIcon } from 'lucide-react';
@@ -28,11 +29,24 @@ const Search = () => {
   });
   
   const [searchResults, setSearchResults] = useState(filterTools(filters));
+  const [matchedCategories, setMatchedCategories] = useState<Category[]>([]);
   const [searchInput, setSearchInput] = useState(filters.query);
   
   useEffect(() => {
     const results = filterTools(filters);
     setSearchResults(results);
+    
+    // Find matching categories based on query
+    if (filters.query) {
+      const query = filters.query.toLowerCase();
+      const matchingCategories = categories.filter(category => 
+        category.name.toLowerCase().includes(query) || 
+        category.description.toLowerCase().includes(query)
+      );
+      setMatchedCategories(matchingCategories);
+    } else {
+      setMatchedCategories([]);
+    }
     
     // Update URL without reloading page
     const params = new URLSearchParams();
@@ -94,6 +108,11 @@ const Search = () => {
           </Button>
         </form>
       </div>
+      
+      {/* Display matching categories */}
+      {matchedCategories.length > 0 && (
+        <MatchedCategories categories={matchedCategories} />
+      )}
       
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-1">
