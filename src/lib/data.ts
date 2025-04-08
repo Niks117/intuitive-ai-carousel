@@ -466,741 +466,423 @@ export const categories: Category[] = [
 ];
 
 export const tools: Tool[] = [
+  // Email Tools
   {
-    id: "chatgpt",
-    name: "ChatGPT",
-    description: "ChatGPT is an AI-powered chatbot developed by OpenAI, based on the GPT-4 architecture. It can engage in conversational dialogue and provide responses that can appear remarkably human.",
-    shortDescription: "OpenAI's conversational AI assistant",
-    useCase: "Customer support, content creation, answering questions, brainstorming ideas",
-    pricing: "Freemium",
-    website: "https://chat.openai.com/",
-    documentation: "https://help.openai.com/en/collections/3742473-chatgpt",
+    id: "hoppycopy",
+    name: "HoppyCopy",
+    description: "AI-powered email copywriting tool that helps you create compelling email content for marketing campaigns, newsletters, and outreach.",
+    shortDescription: "AI-powered email copywriting",
+    useCase: "Email marketing, copywriting, sales outreach",
+    pricing: "Paid",
+    website: "https://www.hoppycopy.co/",
+    documentation: "https://help.hoppycopy.co/",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["ai-chat", "latest-ai"],
+    categoryIds: ["email"],
     featured: true,
-    popularity: 98,
-    releaseDate: "2022-11-30"
+    popularity: 88,
+    releaseDate: "2020-05-12"
   },
   {
-    id: "claude",
-    name: "Claude",
-    description: "Claude is an AI assistant created by Anthropic, designed to be helpful, harmless, and honest. It excels at thoughtful dialogue and complex reasoning.",
-    shortDescription: "Anthropic's conversational AI assistant",
-    useCase: "Content creation, reasoning tasks, creative writing, research assistance",
+    id: "klaviyo",
+    name: "Klaviyo",
+    description: "Email & SMS marketing automation platform designed specifically for ecommerce brands, featuring AI-driven segmentation and personalization.",
+    shortDescription: "Email & SMS marketing automation",
+    useCase: "Ecommerce marketing, customer retention, automated campaigns",
     pricing: "Freemium",
-    website: "https://claude.ai/",
-    documentation: "https://docs.anthropic.com/claude/",
+    website: "https://www.klaviyo.com/",
+    documentation: "https://help.klaviyo.com/",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["ai-chat", "latest-ai"],
+    categoryIds: ["email", "automation"],
     featured: true,
     popularity: 92,
-    releaseDate: "2023-03-14"
+    releaseDate: "2012-08-15"
   },
   {
-    id: "bard",
-    name: "Gemini",
-    description: "Gemini (formerly Bard) is Google's AI assistant that provides conversational responses, helping with creative content, answering questions, and assisting with various tasks.",
-    shortDescription: "Google's AI assistant",
-    useCase: "Information retrieval, creative writing, task assistance",
+    id: "mailerlite",
+    name: "Mailerlite",
+    description: "Simple yet powerful email marketing platform with drag-and-drop editor, automation workflows, and AI-assisted content suggestions.",
+    shortDescription: "Simple email marketing platform",
+    useCase: "Newsletter creation, email automation, subscriber management",
     pricing: "Freemium",
-    website: "https://gemini.google.com/",
-    documentation: "https://ai.google.dev/docs",
+    website: "https://www.mailerlite.com/",
+    documentation: "https://www.mailerlite.com/help",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["ai-chat", "ai-useful"],
+    categoryIds: ["email"],
     featured: false,
-    popularity: 88,
-    releaseDate: "2023-05-10"
+    popularity: 85,
+    releaseDate: "2010-09-22"
   },
   {
-    id: "character-ai",
-    name: "Character.AI",
-    description: "Character.AI allows users to create and chat with AI characters based on fictional characters, historical figures, or original creations.",
-    shortDescription: "Platform for creating conversational AI characters",
-    useCase: "Entertainment, roleplay, language practice, creative writing",
-    pricing: "Freemium",
-    website: "https://character.ai/",
-    documentation: "https://help.character.ai/",
+    id: "getresponse",
+    name: "GetResponse",
+    description: "All-in-one email marketing tool featuring landing pages, automated funnels, webinars, and AI-powered optimization.",
+    shortDescription: "All-in-one email marketing tool",
+    useCase: "Email campaigns, marketing automation, sales funnels",
+    pricing: "Paid",
+    website: "https://www.getresponse.com/",
+    documentation: "https://www.getresponse.com/help",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["ai-chat", "ai-characters"],
+    categoryIds: ["email", "marketing"],
     featured: false,
-    popularity: 84,
-    releaseDate: "2022-09-20"
+    popularity: 86,
+    releaseDate: "1998-06-30"
   },
   {
-    id: "pi-ai",
-    name: "Pi",
-    description: "Pi is a personal AI assistant designed for conversation and providing thoughtful, helpful responses to questions on virtually any topic.",
-    shortDescription: "Personal AI assistant with natural conversation",
-    useCase: "Personal assistance, conversation, information retrieval",
+    id: "beehiiv-ai",
+    name: "Beehiiv AI",
+    description: "Newsletter platform designed for growth and monetization, featuring AI-powered content suggestions and audience analytics.",
+    shortDescription: "Newsletter growth & monetization",
+    useCase: "Newsletter publishing, audience growth, content monetization",
+    pricing: "Freemium",
+    website: "https://www.beehiiv.com/",
+    documentation: "https://beehiiv.com/help",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["email", "writing-seo"],
+    featured: true,
+    popularity: 89,
+    releaseDate: "2021-03-08"
+  },
+  
+  // E-commerce Tools
+  {
+    id: "magic-shopify",
+    name: "Magic by Shopify",
+    description: "Suite of AI tools developed by Shopify to help sellers create product descriptions, respond to customer queries, and optimize their stores.",
+    shortDescription: "AI tools by Shopify for sellers",
+    useCase: "Product listing optimization, customer support, content creation",
+    pricing: "Freemium",
+    website: "https://www.shopify.com/magic",
+    documentation: "https://help.shopify.com/en/manual/shopify-magic",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["ecommerce", "ai-useful"],
+    featured: true,
+    popularity: 91,
+    releaseDate: "2023-06-22"
+  },
+  {
+    id: "echowin-ai-ecommerce",
+    name: "Echowin AI",
+    description: "AI-powered system that automates customer interactions through voice and chat for e-commerce businesses, handling order status, returns, and inquiries.",
+    shortDescription: "AI for customer interaction automation",
+    useCase: "Customer service automation, order processing, support",
+    pricing: "Paid",
+    website: "https://www.echowin.ai/",
+    documentation: "https://docs.echowin.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["ecommerce", "customer-support"],
+    featured: false,
+    popularity: 85,
+    releaseDate: "2022-02-15"
+  },
+  {
+    id: "pokecut",
+    name: "Pokecut",
+    description: "AI image background remover specifically designed for product images, helping e-commerce sellers create clean, professional product photos.",
+    shortDescription: "AI image background remover for product images",
+    useCase: "Product photography, image editing, marketplace listings",
+    pricing: "Freemium",
+    website: "https://www.pokecut.com/",
+    documentation: "https://www.pokecut.com/help",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["ecommerce", "image-editing"],
+    featured: false,
+    popularity: 83,
+    releaseDate: "2021-11-03"
+  },
+  {
+    id: "free-ai-chatbot-builder",
+    name: "Free AI Chatbot Builder",
+    description: "No-code platform for creating AI-powered chatbots for e-commerce websites, helping with sales, support, and customer engagement.",
+    shortDescription: "No-code chatbot creation tool",
+    useCase: "Customer support, lead generation, sales assistance",
     pricing: "Free",
-    website: "https://pi.ai/",
-    documentation: "https://docs.pi.ai/",
+    website: "https://www.chatbot.com/free-ai-chatbot/",
+    documentation: "https://help.chatbot.com/",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["ai-chat", "life-assistants"],
+    categoryIds: ["ecommerce", "chatbots", "no-code"],
     featured: false,
     popularity: 82,
-    releaseDate: "2023-08-08"
+    releaseDate: "2022-08-17"
   },
   {
-    id: "midjourney",
-    name: "Midjourney",
-    description: "Midjourney is an AI art generator that creates images based on text prompts, known for its artistic style and high-quality outputs.",
-    shortDescription: "AI-powered image generation from text prompts",
-    useCase: "Creating concept art, illustrations, creative imagery",
-    pricing: "Paid",
-    website: "https://www.midjourney.com/",
-    documentation: "https://docs.midjourney.com/",
+    id: "namelix",
+    name: "Namelix",
+    description: "AI business name generator that creates short, brandable names for e-commerce stores and other businesses using machine learning algorithms.",
+    shortDescription: "AI business name generator",
+    useCase: "Brand creation, business naming, domain finding",
+    pricing: "Free",
+    website: "https://namelix.com/",
+    documentation: "https://namelix.com/app/how-it-works",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["image-generators", "art"],
+    categoryIds: ["ecommerce", "business"],
+    featured: false,
+    popularity: 84,
+    releaseDate: "2019-05-20"
+  },
+  
+  // Dating & Relationships Tools
+  {
+    id: "roast-dating",
+    name: "Roast Dating",
+    description: "Fun AI tool that provides personalized feedback on dating profiles, helping users improve their photos, bios, and overall dating app presence.",
+    shortDescription: "Fun dating profile feedback",
+    useCase: "Dating profile optimization, photo selection, bio writing",
+    pricing: "Freemium",
+    website: "https://roast.dating/",
+    documentation: "https://help.roast.dating/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["dating-relationships"],
     featured: true,
-    popularity: 95,
+    popularity: 87,
+    releaseDate: "2021-07-14"
+  },
+  {
+    id: "wingman-ai",
+    name: "Wingman",
+    description: "AI-powered dating assistant that helps users craft better messages, suggests conversation starters, and provides real-time advice during chats.",
+    shortDescription: "AI-powered dating assistant",
+    useCase: "Conversation improvement, message crafting, dating advice",
+    pricing: "Paid",
+    website: "https://wingman.ai/",
+    documentation: "https://support.wingman.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["dating-relationships", "ai-chat"],
+    featured: false,
+    popularity: 84,
+    releaseDate: "2022-02-10"
+  },
+  {
+    id: "lovegpt",
+    name: "LoveGPT",
+    description: "AI-based romantic chat assistant designed to help users practice flirting, craft romantic messages, and improve their dating communication skills.",
+    shortDescription: "AI-based romantic chat assistant",
+    useCase: "Romantic message writing, flirting practice, relationship communication",
+    pricing: "Freemium",
+    website: "https://lovegpt.ai/",
+    documentation: "https://lovegpt.ai/guide",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["dating-relationships", "ai-characters"],
+    featured: false,
+    popularity: 83,
+    releaseDate: "2023-02-14"
+  },
+  {
+    id: "texts-from-my-ex",
+    name: "Texts from My Ex",
+    description: "Curated database of breakup and relationship texts with AI analysis to help users understand communication patterns in relationships.",
+    shortDescription: "Curated breakup text database",
+    useCase: "Relationship advice, communication analysis, breakup support",
+    pricing: "Free",
+    website: "https://textsfromyourex.com/",
+    documentation: "https://textsfromyourex.com/about",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["dating-relationships"],
+    featured: false,
+    popularity: 78,
+    releaseDate: "2020-11-22"
+  },
+  {
+    id: "realfake",
+    name: "RealFake",
+    description: "AI-generated relationship simulations that help users practice difficult conversations, conflict resolution, and emotional intelligence in relationships.",
+    shortDescription: "AI-generated relationship simulations",
+    useCase: "Relationship skills practice, conflict resolution, communication improvement",
+    pricing: "Paid",
+    website: "https://realfake.io/",
+    documentation: "https://realfake.io/help",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["dating-relationships", "ai-characters"],
+    featured: false,
+    popularity: 80,
+    releaseDate: "2022-09-05"
+  },
+  
+  // Data & Analytics Tools
+  {
+    id: "databricks",
+    name: "Databricks",
+    description: "Unified data analytics platform that combines data engineering, science, and business analytics with AI capabilities for large-scale data processing.",
+    shortDescription: "Unified data analytics platform",
+    useCase: "Big data processing, machine learning, business intelligence",
+    pricing: "Paid",
+    website: "https://www.databricks.com/",
+    documentation: "https://docs.databricks.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["data-analytics"],
+    featured: true,
+    popularity: 93,
+    releaseDate: "2013-06-30"
+  },
+  {
+    id: "kaggle",
+    name: "Kaggle",
+    description: "Platform for data science competitions, datasets, and notebooks with AI tools for analysis and collaboration among data scientists.",
+    shortDescription: "Data science competitions & datasets",
+    useCase: "Data analysis, machine learning practice, model development",
+    pricing: "Free",
+    website: "https://www.kaggle.com/",
+    documentation: "https://www.kaggle.com/docs",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["data-analytics", "research-science"],
+    featured: true,
+    popularity: 91,
+    releaseDate: "2010-04-01"
+  },
+  {
+    id: "censius",
+    name: "Censius",
+    description: "AI observability platform that monitors ML models in production, detects issues, and provides insights for model improvement and maintenance.",
+    shortDescription: "AI observability platform",
+    useCase: "ML model monitoring, AI performance tracking, data drift detection",
+    pricing: "Freemium",
+    website: "https://www.censius.ai/",
+    documentation: "https://docs.censius.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["data-analytics", "developer-tools"],
+    featured: false,
+    popularity: 84,
+    releaseDate: "2021-03-18"
+  },
+  {
+    id: "arttheble-ai",
+    name: "Arttheble AI",
+    description: "AI-powered data visualization tool that automatically generates interactive charts, graphs, and dashboards from raw data with minimal configuration.",
+    shortDescription: "AI for data visualization",
+    useCase: "Business reporting, data presentation, insight generation",
+    pricing: "Paid",
+    website: "https://www.arttheble.ai/",
+    documentation: "https://help.arttheble.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["data-analytics", "business"],
+    featured: false,
+    popularity: 82,
     releaseDate: "2022-07-12"
   },
   {
-    id: "dalle",
-    name: "DALL·E 3",
-    description: "DALL·E 3 is OpenAI's most advanced text-to-image generation model, capable of creating highly detailed and photorealistic images from text descriptions.",
-    shortDescription: "OpenAI's advanced text-to-image AI model",
-    useCase: "Generating images from text descriptions, creative design work",
-    pricing: "Paid",
-    website: "https://openai.com/dall-e-3",
-    documentation: "https://platform.openai.com/docs",
+    id: "tability",
+    name: "Tability",
+    description: "Goal tracking and OKR (Objectives and Key Results) tool with AI insights to help teams track progress and align on strategic objectives.",
+    shortDescription: "Goal tracking & OKR tool",
+    useCase: "Performance management, team alignment, strategic planning",
+    pricing: "Freemium",
+    website: "https://www.tability.io/",
+    documentation: "https://help.tability.io/",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["image-generators", "art"],
+    categoryIds: ["data-analytics", "business"],
+    featured: false,
+    popularity: 81,
+    releaseDate: "2019-10-15"
+  },
+  
+  // Customer Support Tools
+  {
+    id: "echowin-ai-support",
+    name: "Echowin AI",
+    description: "AI system that answers customer calls using natural language processing, handling common queries and routing complex issues to human agents.",
+    shortDescription: "AI answering customer calls",
+    useCase: "Call center automation, customer inquiry handling, support triage",
+    pricing: "Paid",
+    website: "https://www.echowin.ai/",
+    documentation: "https://docs.echowin.ai/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["customer-support", "ai-useful"],
     featured: true,
-    popularity: 94,
-    releaseDate: "2023-09-20"
+    popularity: 88,
+    releaseDate: "2022-02-15"
   },
   {
-    id: "stable-diffusion",
-    name: "Stable Diffusion",
-    description: "Stable Diffusion is an open-source AI model that can generate detailed images from text descriptions, available for local installation and customization.",
-    shortDescription: "Open-source text-to-image generation",
-    useCase: "Creative image generation, art creation, concept visualization",
-    pricing: "Free",
-    website: "https://stability.ai/",
-    documentation: "https://stability.ai/documentation",
+    id: "luma-ai-support",
+    name: "Luma AI",
+    description: "AI platform for customer query management that automatically categorizes, prioritizes, and routes customer inquiries to the right team members.",
+    shortDescription: "AI for customer query management",
+    useCase: "Support ticket management, query prioritization, customer communication",
+    pricing: "Paid",
+    website: "https://luma.ai/support",
+    documentation: "https://docs.luma.ai/support",
     imageUrl: "/placeholder.svg",
     logoUrl: "/placeholder.svg",
-    categoryIds: ["image-generators", "art", "github-projects"],
+    categoryIds: ["customer-support"],
+    featured: false,
+    popularity: 85,
+    releaseDate: "2021-09-14"
+  },
+  {
+    id: "salesforce-einstein",
+    name: "Salesforce Einstein",
+    description: "AI-powered CRM assistant that provides predictive insights, automates routine tasks, and helps support agents deliver better customer service.",
+    shortDescription: "AI-powered CRM assistant",
+    useCase: "Customer relationship management, service predictions, case routing",
+    pricing: "Paid",
+    website: "https://www.salesforce.com/products/einstein/overview/",
+    documentation: "https://help.salesforce.com/s/articleView?id=sf.einstein.htm",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["customer-support", "business"],
     featured: true,
     popularity: 90,
-    releaseDate: "2022-08-22"
+    releaseDate: "2016-09-19"
   },
   {
-    id: "leonardo-ai",
-    name: "Leonardo.AI",
-    description: "Leonardo.AI is a creative platform for generating and manipulating images using AI, offering various styles and customization options.",
-    shortDescription: "AI creative suite for image generation",
-    useCase: "Game asset creation, concept art, illustrations",
+    id: "zendesk-ai",
+    name: "Zendesk AI",
+    description: "AI-powered solutions for smart ticket resolution, automated responses, and agent assistance within the Zendesk customer support platform.",
+    shortDescription: "AI for smart ticket resolution",
+    useCase: "Support automation, agent augmentation, customer self-service",
+    pricing: "Paid",
+    website: "https://www.zendesk.com/service/answer-bot/",
+    documentation: "https://support.zendesk.com/hc/en-us/articles/4408882153498",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["customer-support"],
+    featured: false,
+    popularity: 87,
+    releaseDate: "2017-12-12"
+  },
+  {
+    id: "tidio",
+    name: "Tidio",
+    description: "Live chat and AI chatbot platform for customer support, featuring automated responses, custom workflows, and integration with multiple channels.",
+    shortDescription: "Live chat & AI chatbot for support",
+    useCase: "Real-time customer support, lead generation, sales assistance",
+    pricing: "Freemium",
+    website: "https://www.tidio.com/",
+    documentation: "https://help.tidio.com/",
+    imageUrl: "/placeholder.svg",
+    logoUrl: "/placeholder.svg",
+    categoryIds: ["customer-support", "chatbots"],
+    featured: false,
+    popularity: 86,
+    releaseDate: "2018-05-30"
+  },
+  
+  // 3D Model Tools
+  {
+    id: "leonardo-ai-3d",
+    name: "Leonardo AI",
+    description: "AI platform that generates high-quality 3D assets and concept art, helping designers and developers create immersive experiences quickly.",
+    shortDescription: "Generate high-quality 3D assets with AI",
+    useCase: "Game development, VR/AR content, product visualization",
     pricing: "Freemium",
     website: "https://leonardo.ai/",
     documentation: "https://docs.leonardo.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["image-generators", "art"],
-    featured: false,
-    popularity: 87,
-    releaseDate: "2022-12-15"
-  },
-  {
-    id: "firefly",
-    name: "Adobe Firefly",
-    description: "Adobe Firefly is a creative generative AI that creates images, effects, and text styles for creative projects with commercial rights for the outputs.",
-    shortDescription: "Adobe's generative AI for creative work",
-    useCase: "Commercial design, creative imagery, text effects",
-    pricing: "Paid",
-    website: "https://firefly.adobe.com/",
-    documentation: "https://helpx.adobe.com/firefly/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["image-generators", "art", "websites-design"],
-    featured: true,
-    popularity: 89,
-    releaseDate: "2023-03-21"
-  },
-  {
-    id: "copilot",
-    name: "GitHub Copilot",
-    description: "GitHub Copilot is an AI pair programmer that offers autocomplete-style suggestions as you code. It helps you write better code faster by suggesting line completions and entire function bodies as you type.",
-    shortDescription: "AI pair programming assistant",
-    useCase: "Code completion, function generation, programming assistance",
-    pricing: "Paid",
-    website: "https://github.com/features/copilot",
-    documentation: "https://docs.github.com/en/copilot",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["assistant-code", "developer-tools"],
-    featured: true,
-    popularity: 93,
-    releaseDate: "2021-06-29"
-  },
-  {
-    id: "codewhisperer",
-    name: "Amazon CodeWhisperer",
-    description: "Amazon CodeWhisperer is an AI coding companion that helps developers build applications by generating code suggestions based on natural language comments and existing code.",
-    shortDescription: "Amazon's AI code generator",
-    useCase: "Code generation, code completion, programming assistance",
-    pricing: "Freemium",
-    website: "https://aws.amazon.com/codewhisperer/",
-    documentation: "https://docs.aws.amazon.com/codewhisperer/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["assistant-code", "developer-tools"],
-    featured: false,
-    popularity: 86,
-    releaseDate: "2022-06-23"
-  },
-  {
-    id: "tabnine",
-    name: "Tabnine",
-    description: "Tabnine is an AI code assistant that provides code completions based on your code patterns and context, supporting many programming languages and IDEs.",
-    shortDescription: "AI code completion for multiple languages",
-    useCase: "Code autocompletion, code suggestions",
-    pricing: "Freemium",
-    website: "https://www.tabnine.com/",
-    documentation: "https://docs.tabnine.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["assistant-code", "developer-tools"],
-    featured: false,
-    popularity: 84,
-    releaseDate: "2019-03-15"
-  },
-  {
-    id: "codium",
-    name: "Codium",
-    description: "Codium is an AI coding assistant that generates unit tests automatically, helping developers ensure code quality and test coverage.",
-    shortDescription: "AI-powered test generation",
-    useCase: "Automated test creation, code quality improvement",
-    pricing: "Freemium",
-    website: "https://www.codium.ai/",
-    documentation: "https://docs.codium.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["assistant-code", "developer-tools"],
-    featured: false,
-    popularity: 82,
-    releaseDate: "2022-11-10"
-  },
-  {
-    id: "cursor",
-    name: "Cursor",
-    description: "Cursor is an AI-powered code editor that helps developers understand, edit, and generate code with features like AI chat, code editing, and refactoring.",
-    shortDescription: "AI-enhanced code editor",
-    useCase: "Code understanding, generation, editing, refactoring",
-    pricing: "Freemium",
-    website: "https://cursor.sh/",
-    documentation: "https://docs.cursor.sh/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["assistant-code", "developer-tools"],
-    featured: false,
-    popularity: 85,
-    releaseDate: "2023-02-07"
-  },
-  {
-    id: "notion-ai",
-    name: "Notion AI",
-    description: "Notion AI integrates artificial intelligence into the Notion workspace, helping users draft content, summarize notes, improve writing, and extract insights from their documents.",
-    shortDescription: "AI writing assistant integrated with Notion",
-    useCase: "Content creation, summarization, editing, brainstorming",
-    pricing: "Paid",
-    website: "https://www.notion.so/product/ai",
-    documentation: "https://www.notion.so/help/guides/using-notion-ai",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["productivity", "writing-seo"],
-    featured: true,
-    popularity: 90,
-    releaseDate: "2023-02-22"
-  },
-  {
-    id: "zapier",
-    name: "Zapier AI",
-    description: "Zapier AI integrates AI capabilities into workflow automation, allowing users to build AI-powered workflows that can process natural language and perform actions across apps.",
-    shortDescription: "AI-powered workflow automation",
-    useCase: "Automation, data processing, content generation",
-    pricing: "Paid",
-    website: "https://zapier.com/ai",
-    documentation: "https://help.zapier.com/hc/en-us/articles/15163945759117-Get-started-with-Zapier-AI",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["productivity", "automation"],
-    featured: false,
-    popularity: 87,
-    releaseDate: "2023-05-16"
-  },
-  {
-    id: "taskade",
-    name: "Taskade AI",
-    description: "Taskade AI is a productivity tool that helps with task management, note-taking, and project collaboration, featuring AI-powered assistance for generating content and organizing work.",
-    shortDescription: "All-in-one AI productivity workspace",
-    useCase: "Task management, note-taking, collaboration",
-    pricing: "Freemium",
-    website: "https://www.taskade.com/ai",
-    documentation: "https://help.taskade.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["productivity", "business"],
-    featured: false,
-    popularity: 83,
-    releaseDate: "2022-08-30"
-  },
-  {
-    id: "mem",
-    name: "Mem",
-    description: "Mem is an AI-powered note-taking app that automatically organizes your notes and knowledge base, with features like knowledge connections and smart search.",
-    shortDescription: "AI-powered knowledge organization",
-    useCase: "Note-taking, knowledge management, collaboration",
-    pricing: "Freemium",
-    website: "https://mem.ai/",
-    documentation: "https://help.mem.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["productivity", "memory"],
-    featured: false,
-    popularity: 82,
-    releaseDate: "2021-11-16"
-  },
-  {
-    id: "timely",
-    name: "Timely",
-    description: "Timely is an AI time tracking tool that automatically records time spent on projects, helping users track billable hours without manual timers.",
-    shortDescription: "AI-powered automatic time tracking",
-    useCase: "Time management, project tracking, billing",
-    pricing: "Paid",
-    website: "https://timelyapp.com/",
-    documentation: "https://support.timelyapp.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["productivity", "business"],
-    featured: false,
-    popularity: 80,
-    releaseDate: "2020-03-10"
-  },
-  {
-    id: "gpt4",
-    name: "GPT-4",
-    description: "GPT-4 is OpenAI's most advanced large language model, capable of solving difficult problems with greater accuracy, creativity, and collaboration. It can process both image and text inputs to generate text outputs.",
-    shortDescription: "OpenAI's most powerful large language model",
-    useCase: "Content generation, code writing, complex reasoning tasks",
-    pricing: "Paid",
-    website: "https://openai.com/gpt-4",
-    documentation: "https://platform.openai.com/docs/models/gpt-4",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["llm-models", "latest-ai"],
-    featured: true,
-    popularity: 96,
-    releaseDate: "2023-03-14"
-  },
-  {
-    id: "llama3",
-    name: "Llama 3",
-    description: "Llama 3 is Meta's latest open-source large language model, designed to be accessible to researchers and commercial users while maintaining strong performance across various tasks.",
-    shortDescription: "Meta's open-source large language model",
-    useCase: "Research, commercial applications, custom AI assistants",
-    pricing: "Free",
-    website: "https://llama.meta.com/",
-    documentation: "https://llama.meta.com/docs/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["llm-models", "latest-ai"],
-    featured: true,
-    popularity: 91,
-    releaseDate: "2024-04-18"
-  },
-  {
-    id: "claude-3",
-    name: "Claude 3",
-    description: "Claude 3 is Anthropic's latest AI model family with improved reasoning, factual accuracy, and multimodal capabilities, available in three variants: Haiku, Sonnet, and Opus.",
-    shortDescription: "Anthropic's advanced AI model family",
-    useCase: "Content creation, reasoning, multimodal tasks",
-    pricing: "Paid",
-    website: "https://www.anthropic.com/claude",
-    documentation: "https://docs.anthropic.com/claude/docs",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["llm-models", "latest-ai"],
-    featured: true,
-    popularity: 92,
-    releaseDate: "2024-03-04"
-  },
-  {
-    id: "mistral",
-    name: "Mistral AI",
-    description: "Mistral AI offers a range of open-source and commercial large language models known for their efficiency and performance relative to their size.",
-    shortDescription: "Efficient, performant language models",
-    useCase: "Text generation, reasoning, custom applications",
-    pricing: "Freemium",
-    website: "https://mistral.ai/",
-    documentation: "https://docs.mistral.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["llm-models", "latest-ai"],
-    featured: false,
-    popularity: 88,
-    releaseDate: "2023-09-27"
-  },
-  {
-    id: "cohere",
-    name: "Cohere Command",
-    description: "Cohere Command is a family of large language models optimized for business and enterprise use cases, with strong performance on tasks requiring reasoning and instruction following.",
-    shortDescription: "Enterprise-focused language models",
-    useCase: "Business applications, document understanding, customer service",
-    pricing: "Paid",
-    website: "https://cohere.com/",
-    documentation: "https://docs.cohere.com/docs",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["llm-models", "business"],
-    featured: false,
-    popularity: 85,
-    releaseDate: "2023-05-05"
-  },
-  {
-    id: "elevenlabs",
-    name: "ElevenLabs",
-    description: "ElevenLabs offers AI voice technology that produces realistic speech synthesis and voice cloning, allowing users to create lifelike narrations and dialogue.",
-    shortDescription: "High-quality AI voice synthesis platform",
-    useCase: "Content creation, audiobooks, voiceovers, game dialogue",
-    pricing: "Freemium",
-    website: "https://elevenlabs.io/",
-    documentation: "https://docs.elevenlabs.io/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["text-to-speech", "voice-cloning"],
-    featured: true,
-    popularity: 89,
-    releaseDate: "2022-01-15"
-  },
-  {
-    id: "murf",
-    name: "Murf AI",
-    description: "Murf AI provides studio-quality voice overs with AI voices that sound like real humans, allowing users to create professional voiceovers without a recording studio.",
-    shortDescription: "AI voice generation for professional content",
-    useCase: "Video narration, presentations, educational content",
-    pricing: "Freemium",
-    website: "https://murf.ai/",
-    documentation: "https://docs.murf.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["text-to-speech", "voice-cloning"],
-    featured: false,
-    popularity: 86,
-    releaseDate: "2020-11-18"
-  },
-  {
-    id: "play-ht",
-    name: "Play.ht",
-    description: "Play.ht uses AI to generate human-like voiceovers in over 130 languages and 850+ voice options, with features for voice cloning and real-time voice conversion.",
-    shortDescription: "AI voice generation platform",
-    useCase: "Podcasts, video narration, advertising, audiobooks",
-    pricing: "Freemium",
-    website: "https://play.ht/",
-    documentation: "https://docs.play.ht/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["text-to-speech", "voice-cloning"],
-    featured: false,
-    popularity: 85,
-    releaseDate: "2020-09-03"
-  },
-  {
-    id: "wellsaid",
-    name: "WellSaid Labs",
-    description: "WellSaid Labs creates AI voice avatars for professional voice over production, allowing users to create studio-quality narration without recording equipment.",
-    shortDescription: "AI voice avatars for professional voiceovers",
-    useCase: "E-learning, corporate training, product demos",
-    pricing: "Paid",
-    website: "https://wellsaidlabs.com/",
-    documentation: "https://help.wellsaidlabs.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["text-to-speech", "voice-cloning"],
-    featured: false,
-    popularity: 84,
-    releaseDate: "2019-04-22"
-  },
-  {
-    id: "speechify",
-    name: "Speechify",
-    description: "Speechify is a text-to-speech application that converts text into natural-sounding speech, allowing users to listen to documents, articles, PDFs, and more.",
-    shortDescription: "Text-to-speech reader for documents",
-    useCase: "Reading assistance, content consumption, accessibility",
-    pricing: "Freemium",
-    website: "https://speechify.com/",
-    documentation: "https://help.speechify.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["text-to-speech", "assistive-tech"],
-    featured: false,
-    popularity: 87,
-    releaseDate: "2018-01-30"
-  }
-];
-
-const MIN_TOOLS_PER_CATEGORY = 5;
-
-const generateToolsForCategory = (categoryId: string, existingToolsCount: number): Tool[] => {
-  if (existingToolsCount >= MIN_TOOLS_PER_CATEGORY) return [];
-  
-  const category = categories.find(c => c.id === categoryId);
-  if (!category) return [];
-  
-  const toolsNeeded = MIN_TOOLS_PER_CATEGORY - existingToolsCount;
-  const newTools: Tool[] = [];
-  
-  for (let i = 1; i <= toolsNeeded; i++) {
-    const toolId = `${categoryId}-tool-${i}`;
-    newTools.push({
-      id: toolId,
-      name: `${category.name} Tool ${i}`,
-      description: `An AI-powered tool for ${category.description.toLowerCase()}`,
-      shortDescription: `AI solution for ${category.name.toLowerCase()}`,
-      useCase: `Used for various ${category.name.toLowerCase()} tasks and workflows`,
-      pricing: ['Free', 'Paid', 'Freemium'][Math.floor(Math.random() * 3)] as 'Free' | 'Paid' | 'Freemium',
-      website: `https://example.com/${toolId}`,
-      documentation: `https://docs.example.com/${toolId}`,
-      imageUrl: "/placeholder.svg",
-      logoUrl: "/placeholder.svg",
-      categoryIds: [categoryId],
-      featured: false,
-      popularity: 60 + Math.floor(Math.random() * 20),
-      releaseDate: `202${Math.floor(Math.random() * 5)}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, '0')}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, '0')}`
-    });
-  }
-  
-  return newTools;
-};
-
-const generateAdditionalTools = (): Tool[] => {
-  const additionalTools: Tool[] = [];
-  
-  categories.forEach(category => {
-    const toolsInCategory = tools.filter(tool => tool.categoryIds.includes(category.id));
-    const newTools = generateToolsForCategory(category.id, toolsInCategory.length);
-    additionalTools.push(...newTools);
-  });
-  
-  return additionalTools;
-};
-
-export const allTools: Tool[] = [
-  ...tools,
-  ...generateAdditionalTools(),
-  {
-    id: "perplexity",
-    name: "Perplexity AI",
-    description: "Perplexity AI is an AI-powered search engine that provides summarized answers with citations to questions, combining the capabilities of search engines and large language models.",
-    shortDescription: "AI-powered search and answer engine",
-    useCase: "Research, information gathering, quick answers to complex questions",
-    pricing: "Freemium",
-    website: "https://www.perplexity.ai/",
-    documentation: "https://docs.perplexity.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["search-engine", "latest-ai"],
-    featured: true,
-    popularity: 90,
-    releaseDate: "2022-08-30"
-  },
-  {
-    id: "synthesia",
-    name: "Synthesia",
-    description: "Synthesia is an AI video generation platform that allows users to create professional videos with AI avatars. It enables video creation without cameras, actors, or studios.",
-    shortDescription: "AI video creation with virtual avatars",
-    useCase: "Training videos, marketing content, localized videos in multiple languages",
-    pricing: "Paid",
-    website: "https://www.synthesia.io/",
-    documentation: "https://docs.synthesia.io/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["video-generators", "avatars"],
-    featured: false,
-    popularity: 87,
-    releaseDate: "2019-06-12"
-  },
-  {
-    id: "jasper",
-    name: "Jasper",
-    description: "Jasper is an AI content platform that helps teams create high-quality marketing content faster. It offers tools for writing blog posts, social media content, emails, and more.",
-    shortDescription: "AI content creation for marketing teams",
-    useCase: "Content marketing, copywriting, social media content",
-    pricing: "Paid",
-    website: "https://www.jasper.ai/",
-    documentation: "https://support.jasper.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["writing-seo", "marketing"],
-    featured: false,
-    popularity: 86,
-    releaseDate: "2021-02-01"
-  },
-  {
-    id: "otter",
-    name: "Otter.ai",
-    description: "Otter.ai is an AI-powered transcription and note-taking app that records audio, transcribes speech, and generates summaries of meetings and conversations.",
-    shortDescription: "AI meeting transcription and note-taking",
-    useCase: "Meeting transcription, interview recording, note-taking",
-    pricing: "Freemium",
-    website: "https://otter.ai/",
-    documentation: "https://support.otter.ai/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["transcriber", "productivity"],
-    featured: false,
-    popularity: 85,
-    releaseDate: "2018-02-01"
-  },
-  {
-    id: "looka",
-    name: "Looka",
-    description: "Looka is an AI-powered logo maker that helps businesses create professional logo designs and brand identities without needing design experience.",
-    shortDescription: "AI logo and brand identity designer",
-    useCase: "Logo design, brand identity creation, business cards and marketing materials",
-    pricing: "Freemium",
-    website: "https://looka.com/",
-    documentation: "https://support.looka.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["logo-creation", "websites-design"],
-    featured: false,
-    popularity: 84,
-    releaseDate: "2016-11-01"
-  },
-  {
-    id: "deepl",
-    name: "DeepL",
-    description: "DeepL is an AI translation service that provides remarkably accurate and natural-sounding translations for text and documents across multiple languages.",
-    shortDescription: "AI-powered language translation",
-    useCase: "Document translation, website localization, content translation",
-    pricing: "Freemium",
-    website: "https://www.deepl.com/",
-    documentation: "https://support.deepl.com/",
-    imageUrl: "/placeholder.svg",
-    logoUrl: "/placeholder.svg",
-    categoryIds: ["translation"],
-    featured: false,
-    popularity: 88,
-    releaseDate: "2017-08-01"
-  }
-];
-
-export const users: User[] = [
-  {
-    id: "user1",
-    name: "Admin User",
-    email: "admin@example.com",
-    isAdmin: true,
-    favoriteToolIds: ["chatgpt", "midjourney", "copilot"]
-  },
-  {
-    id: "user2",
-    name: "Regular User",
-    email: "user@example.com",
-    isAdmin: false,
-    favoriteToolIds: ["dalle", "llama3"]
-  }
-];
-
-export const getToolsByCategory = (categoryId: string): Tool[] => {
-  return allTools.filter(tool => tool.categoryIds.includes(categoryId));
-};
-
-export const getFeaturedTools = (): Tool[] => {
-  return allTools.filter(tool => tool.featured);
-};
-
-export const searchTools = (query: string): Tool[] => {
-  const lowerCaseQuery = query.toLowerCase();
-  return allTools.filter(tool => 
-    tool.name.toLowerCase().includes(lowerCaseQuery) ||
-    tool.description.toLowerCase().includes(lowerCaseQuery) ||
-    tool.useCase.toLowerCase().includes(lowerCaseQuery)
-  );
-};
-
-export const filterTools = (filters: SearchFilters): Tool[] => {
-  return allTools.filter(tool => {
-    if (filters.query && 
-        !tool.name.toLowerCase().includes(filters.query.toLowerCase()) &&
-        !tool.description.toLowerCase().includes(filters.query.toLowerCase()) &&
-        !tool.useCase.toLowerCase().includes(filters.query.toLowerCase())) {
-      return false;
-    }
-    
-    if (filters.categories.length > 0 && 
-        !tool.categoryIds.some(cat => filters.categories.includes(cat))) {
-      return false;
-    }
-    
-    if (filters.pricing.length > 0 && 
-        !filters.pricing.includes(tool.pricing)) {
-      return false;
-    }
-    
-    return true;
-  }).sort((a, b) => {
-    if (filters.sortBy === 'popularity') {
-      return filters.sortOrder === 'desc' 
-        ? b.popularity - a.popularity 
-        : a.popularity - b.popularity;
-    } else if (filters.sortBy === 'releaseDate') {
-      return filters.sortOrder === 'desc' 
-        ? new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime()
-        : new Date(a.releaseDate).getTime() - new Date(b.releaseDate).getTime();
-    } else {
-      return filters.sortOrder === 'desc' 
-        ? b.name.localeCompare(a.name) 
-        : a.name.localeCompare(b.name);
-    }
-  });
-};
-
-export const recommendTools = (toolId: string, limit: number = 4): Tool[] => {
-  const tool = allTools.find(t => t.id === toolId);
-  if (!tool) return [];
-  
-  const relatedTools = allTools
-    .filter(t => 
-      t.id !== toolId && // Not the same tool
-      t.categoryIds.some(cat => tool.categoryIds.includes(cat)) // Same category
-    )
-    .sort((a, b) => b.popularity - a.popularity) // Sort by popularity
-    .slice(0, limit);
-    
-  return relatedTools;
-};
-
-export const recommendToolsForUser = (userId: string, limit: number = 4): Tool[] => {
-  const user = users.find(u => u.id === userId);
-  if (!user || user.favoriteToolIds.length === 0) {
-    return allTools
-      .sort((a, b) => b.popularity - a.popularity)
-      .slice(0, limit);
-  }
-  
-  const favoriteTools = allTools.filter(tool => user.favoriteToolIds.includes(tool.id));
-  const favoriteCategories = Array.from(
-    new Set(favoriteTools.flatMap(tool => tool.categoryIds))
-  );
-  
-  const recommendations = allTools
-    .filter(tool => 
-      !user.favoriteToolIds.includes(tool.id) && // Not already favorited
-      tool.categoryIds.some(cat => favoriteCategories.includes(cat)) // In favorite categories
-    )
-    .sort((a, b) => b.popularity - a.popularity) // Sort by popularity
-    .slice(0, limit);
-    
-  return recommendations;
-};
