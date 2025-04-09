@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { z } from 'zod';
@@ -8,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { useSupabaseAuth } from '@/contexts/SupabaseAuthContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
 
 const loginSchema = z.object({
@@ -18,7 +17,7 @@ const loginSchema = z.object({
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login, loading } = useSupabaseAuth();
+  const { login, loading } = useAuth();
   
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -37,7 +36,7 @@ const Login = () => {
   
   const handleDemoLogin = async () => {
     // Use one of the mock users for demo login
-    const success = await login('user@example.com', 'password');
+    const success = await login('demo@example.com', 'password');
     if (success) {
       navigate('/');
     } else {

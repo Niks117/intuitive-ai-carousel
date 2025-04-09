@@ -5,10 +5,10 @@ import { allTools } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import { Button } from '@/components/ui/button';
 import { Tool } from '@/lib/types';
-import { useSupabaseAuth } from '@/contexts/SupabaseAuthContext';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Favorites = () => {
-  const { user, toggleFavorite, isFavorite } = useSupabaseAuth();
+  const { user, toggleFavorite, isFavorite } = useAuth();
   const navigate = useNavigate();
   
   // Redirect if not logged in
