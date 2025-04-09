@@ -34,28 +34,30 @@ export const getToolsByCategoryFromSupabase = async (categoryId: string): Promis
  */
 export const filterToolsFromSupabase = async (filters: SearchFilters): Promise<Tool[]> => {
   try {
-    let query = supabase.from('tools').select('*');
+    let queryBuilder = supabase.from('tools').select('*');
     
     // Apply filters
     if (filters.query) {
-      const query = filters.query.toLowerCase();
-      query = query
-        .or('name.ilike.%' + filters.query + '%')
-        .or('description.ilike.%' + filters.query + '%')
-        .or('shortDescription.ilike.%' + filters.query + '%')
-        .or('useCase.ilike.%' + filters.query + '%');
+      const searchQuery = filters.query.toLowerCase();
+      queryBuilder = queryBuilder
+        .or(
+          `name.ilike.%${searchQuery}%,` +
+          `description.ilike.%${searchQuery}%,` +
+          `shortDescription.ilike.%${searchQuery}%,` +
+          `useCase.ilike.%${searchQuery}%`
+        );
     }
     
     if (filters.categories.length > 0) {
       // This assumes categoryIds is stored as an array in Supabase
-      query = query.overlaps('categoryIds', filters.categories);
+      queryBuilder = queryBuilder.overlaps('categoryIds', filters.categories);
     }
     
     if (filters.pricing.length > 0) {
-      query = query.in('pricing', filters.pricing);
+      queryBuilder = queryBuilder.in('pricing', filters.pricing);
     }
     
-    const { data, error } = await query;
+    const { data, error } = await queryBuilder;
     
     if (error || !data) {
       console.warn('Falling back to local filtering for tools', error);
