@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,7 @@ const Index = () => {
   };
   
   return (
-    <div>
+    <div className="bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -71,7 +70,7 @@ const Index = () => {
       </section>
       
       {/* Featured Categories */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold">
@@ -116,7 +115,7 @@ const Index = () => {
       </section>
       
       {/* Why AI Toolbox Pro */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -157,7 +156,7 @@ const Index = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M22 21v-2a4 4 0 0 1 0 7.75"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
